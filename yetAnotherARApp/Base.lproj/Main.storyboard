@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="yetAnotherARApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </arscnView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sqh-Xc-UMQ">
+                                <rect key="frame" x="30" y="74" width="354" height="758"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2021-08-17 at 5.58.41 PM" translatesAutoresizingMaskIntoConstraints="NO" id="klx-16-PMK">
+                                        <rect key="frame" x="16" y="254" width="322" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="qb8-5V-z2b"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Was this MEME funny to you?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFS-Y8-cwV">
+                                        <rect key="frame" x="16" y="534" width="322" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KER-dc-JQf">
+                                        <rect key="frame" x="252" y="616" width="86" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="NOT FUNNY"/>
+                                        <connections>
+                                            <action selector="didPressedNotFunny:" destination="BV1-FR-VrT" eventType="touchUpInside" id="eeG-oo-NYZ"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hxk-3w-oVg">
+                                        <rect key="frame" x="16" y="0.0" width="322" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="Sxy-I7-pQe"/>
+                                        </constraints>
+                                        <string key="text">Hello! and Welcome to the SMILEY ML Training session.  PLEASE READ THIS INSTRUCTIONS carefully as not following proper procedure will result in bad data collection. Instructions are EASY. --&gt; 1. Press "Understood" button to start. 2. You will be shown a series of MEME to classify as funny or not funny. 3. try you best to be as honest and genuie in your reactions as possible.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aI6-X1-5Lb">
+                                        <rect key="frame" x="136.5" y="182" width="81" height="30"/>
+                                        <state key="normal" title="Understood"/>
+                                        <connections>
+                                            <action selector="didPressedUnderstood:" destination="BV1-FR-VrT" eventType="touchUpInside" id="RZc-H7-LTk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0f-2t-wIK">
+                                        <rect key="frame" x="16" y="616" width="51" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="FUNNY"/>
+                                        <connections>
+                                            <action selector="didPressedFunny:" destination="BV1-FR-VrT" eventType="touchUpInside" id="w9I-v5-6rn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="aI6-X1-5Lb" firstAttribute="centerX" secondItem="Sqh-Xc-UMQ" secondAttribute="centerX" id="7yL-hA-fQL"/>
+                                    <constraint firstItem="aI6-X1-5Lb" firstAttribute="top" secondItem="hxk-3w-oVg" secondAttribute="bottom" constant="32" id="88K-lw-vg5"/>
+                                    <constraint firstItem="klx-16-PMK" firstAttribute="centerX" secondItem="Sqh-Xc-UMQ" secondAttribute="centerX" id="B7E-lc-mSK"/>
+                                    <constraint firstAttribute="trailing" secondItem="hxk-3w-oVg" secondAttribute="trailing" constant="16" id="NJx-3i-XdZ"/>
+                                    <constraint firstItem="OFS-Y8-cwV" firstAttribute="leading" secondItem="Sqh-Xc-UMQ" secondAttribute="leading" constant="16" id="SIS-0r-coX"/>
+                                    <constraint firstAttribute="trailing" secondItem="OFS-Y8-cwV" secondAttribute="trailing" constant="16" id="UVt-04-mg7"/>
+                                    <constraint firstItem="klx-16-PMK" firstAttribute="centerY" secondItem="Sqh-Xc-UMQ" secondAttribute="centerY" id="VcQ-Tm-h9p"/>
+                                    <constraint firstItem="hxk-3w-oVg" firstAttribute="top" secondItem="Sqh-Xc-UMQ" secondAttribute="top" id="YKe-F0-lGw"/>
+                                    <constraint firstItem="klx-16-PMK" firstAttribute="leading" secondItem="Sqh-Xc-UMQ" secondAttribute="leading" constant="16" id="ZJ4-MP-MWt"/>
+                                    <constraint firstItem="hxk-3w-oVg" firstAttribute="leading" secondItem="Sqh-Xc-UMQ" secondAttribute="leading" constant="16" id="e0Y-um-tld"/>
+                                    <constraint firstItem="OFS-Y8-cwV" firstAttribute="top" secondItem="klx-16-PMK" secondAttribute="bottom" constant="30" id="elJ-Yy-SMH"/>
+                                    <constraint firstAttribute="trailing" secondItem="klx-16-PMK" secondAttribute="trailing" constant="16" id="hdO-Yy-dlk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="Sqh-Xc-UMQ" secondAttribute="trailing" constant="30" id="1VJ-4r-8JD"/>
+                            <constraint firstItem="Sqh-Xc-UMQ" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" constant="30" id="3In-EZ-vsI"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="Sqh-Xc-UMQ" secondAttribute="bottom" constant="30" id="OBC-80-WUd"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
+                            <constraint firstItem="Sqh-Xc-UMQ" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="30" id="g7B-5L-XtV"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="TraininSessionView" destination="Sqh-Xc-UMQ" id="LlQ-B2-EtB"/>
+                        <outlet property="imageView" destination="klx-16-PMK" id="Fl2-UG-lpn"/>
+                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50.724637681159422" y="61.607142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Screen Shot 2021-08-17 at 5.58.41 PM" width="1570" height="1018"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
